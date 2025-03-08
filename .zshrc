@@ -38,6 +38,11 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# JAVA HOME
+alias java11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+alias java17="export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version"
+alias java21="export JAVA_HOME=`/usr/libexec/java_home -v 21`; java -version"
+
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -99,11 +104,12 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 
 # JAVA HOME
-alias java11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
-alias java17="export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version"
-alias java21="export JAVA_HOME=`/usr/libexec/java_home -v 21`; java -version"
 export JAVA_HOME=`/usr/libexec/java_home -v 17`
 
 # GOOGLE CONSOLE
-if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ] then . "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-if [ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ] then . "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+PATH=~/.console-ninja/.bin:$PATH
