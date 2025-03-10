@@ -32,6 +32,7 @@ export ACCENT_COLOR=0xffffffff
 # export ITEM_BG_COLOR=0xff008c39
 # export ACCENT_COLOR=0xff1dfca1
 
+
 # -- Orange Scheme --
 # export BAR_COLOR=0xff381c02
 # export ITEM_BG_COLOR=0xff99440a
